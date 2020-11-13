@@ -18,6 +18,7 @@ class ExercisesTest extends TestCase
         // This was interesting. Laravel fails gracefully when a route isn't found, so the post route '/exercises' wasn't failing until I explicitly told it to. 
         $this->withoutExceptionHandling();
 
+        // if i have these attributes
         $attributes = [
             
             'name' => $this->faker->name,
@@ -28,12 +29,14 @@ class ExercisesTest extends TestCase
 
         ];
 
-
+        // and i try to post them to this route
         $this->post('/exercises', $attributes);
 
-
+        // then I expext them to be inserted into the projects table
         $this->assertDatabaseHas('exercises', $attributes);
 
+        // and I expect to be able to see the exercise name
+        $this->get('/exercises')->assertSee($attributes['name']);
     }
 
 }

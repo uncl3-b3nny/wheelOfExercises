@@ -17,4 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/exercises', function () {});
+Route::post('/exercises', function () {
+    // validate
+
+    // persist 
+    App\Models\Exercise::create(request(['name','description','number of reps']));
+    // redirect
+});
+
+Route::get('/exercises', function () {
+    // query all exercises, store them in a variable
+    $exercises = App\Models\Exercise::all();
+
+    //and pass them to the view
+    return view('exercises.index', compact('exercises'));
+
+});
