@@ -5,7 +5,7 @@
    <button onClick="theWheel.startAnimation();">Spin the Wheel!</button>
 
     <br>      
-    <canvas id='canvas' width='880' height='420'>
+    <canvas id='canvas' width='800' height='420'>
         Canvas not supported, use another browser.
     </canvas>
 
@@ -82,7 +82,7 @@
     let theWheel = new Winwheel({
         'numSegments' : number_of_segments,
         'segments'    : segments,
-        'outerRadius' : 170,
+        'outerRadius' : 200,
         'animation' :
         {
             'type'          : 'spinToStop',
