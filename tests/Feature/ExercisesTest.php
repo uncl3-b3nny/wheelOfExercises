@@ -16,10 +16,15 @@ class ExercisesTest extends TestCase
         // This was interesting. Laravel fails gracefully when a route isn't found, so the post route '/exercises' wasn't failing until I explicitly told it to. 
         $this->withoutExceptionHandling();
         // if i have these attributes
+        $date = date('Y-m-d H:i:s');
         $attributes = [
+            'id' => 1,
             'name' => $this->faker->name,
             'description' => $this->faker->paragraph,
-            'number of reps' => $this->faker->numberBetween(5,15)
+            'number of reps' => 15,
+            'created_at' => $date,
+            'updated_at' => $date
+
         ];
         // and i try to post them to this route
         $this->post('/exercises', $attributes)->assertRedirect('/exercises');
@@ -43,11 +48,4 @@ class ExercisesTest extends TestCase
         $this->post('/exercises',[])->assertSessionHasErrors('description');
     }
 
-    /** @test */
-    public function an_exercise_requires_a_number_of_reps()
-    {
-        // @ToDo: 2
-        $attributes = Exercise::factory()->raw(['number of reps'=>'']);
-        $this->post('/exercises',[])->assertSessionHasErrors('number of reps');
-    }
 }
