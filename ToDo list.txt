@@ -4,3 +4,4 @@ X1. Refactor route syntax & tests to follow proper conventions
     Done!
 X2. My faker function for number of reps causes this to fail =[ 
     Done!
+3. Refactor this mess
