@@ -1,26 +1,7 @@
-<!-- <!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-    <h1>Wheel of exercises!</h1>
-
-    <ul>
-        @foreach ($exercises as $exercise)
-            <a href="{{ $exercise->path() }}">{{ $exercise->name }}</a>
-        @endforeach
-    </ul>
-
-</body>
-</html>
-
- -->
-
 @extends('layouts.app')
- 
+
 @section('content')
-<br>
+    <br>
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
@@ -71,11 +52,12 @@
   
     {!! $exercises->links() !!}
       
+    <canvas id='canvas' width='880' height='300'>
+        Canvas not supported, use another browser.
+    </canvas>
+    
+    <script>
+        let theWheel = new Winwheel();
+    </script>
 @endsection
 
-<canvas id='canvas' width='880' height='300'>
-    Canvas not supported, use another browser.
-</canvas>
-<script>
-    let theWheel = new Winwheel();
-</script>

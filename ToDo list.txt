@@ -4,8 +4,3 @@ X1. Refactor route syntax & tests to follow proper conventions
     Done!
 X2. My faker function for number of reps causes this to fail =[ 
     Done!
-
-resource routes
-add boilerplate crud to controller
-add boilerplate layout
-add boilerplate crud views
