@@ -52,7 +52,7 @@
         When they click the spin the wheel button, (or if i get there, actually spin the wheel) 
         Then they hear a click for each segment passing
 
-####Don't forget to:
+#### Don't forget to:
 
     Rename .env.example file to .env inside your project root and fill the database information. (windows won't let you do it, so you have to open your console cd your project root directory and run mv .env.example .env )
     Open the console and cd your project root directory
