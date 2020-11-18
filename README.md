@@ -2,13 +2,13 @@
 
 ### The parameters of this evaluation:
     1. Create a Laravel Project.
-    1. Push appropriate files to github/bitbucket.
-    1. Create a route that display/update and create data in a database table
-    1. Use a model
-    1. Use Blade Template engine
-    1. Create the relevant table as a migration
-    1. Display, update and create front end for the data in a non-horrible looking way.
-    1. The turn around time expectation is 1 week.
+    2. Push appropriate files to github/bitbucket.
+    3. Create a route that display/update and create data in a database table
+    4. Use a model
+    5. Use Blade Template engine
+    6. Create the relevant table as a migration
+    7. Display, update and create front end for the data in a non-horrible looking way.
+    8. The turn around time expectation is 1 week.
 
 ## Project Documentation
  - Date received: 11/12/2020
