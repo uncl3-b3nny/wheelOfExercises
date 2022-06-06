@@ -10,6 +10,7 @@ class Exercise extends Model
     use HasFactory;
 
     // protected $guarded = [];
+    // I'm testing code spaces by editing this comment;
     protected $attributes = [
        'number of reps' => 15
     ];
